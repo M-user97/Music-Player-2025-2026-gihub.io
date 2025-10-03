@@ -1,14 +1,22 @@
 /* DIVs: 2D Rectangles
 */
 //
-fullScreen(); //displayWidth //displayHeight
+fullScreen(); //dispalyWidth //displayHeight
 println(displayWidth, displayHeight);
 int appWidth = displayWidth;
 int appHeight = displayHeight;
 //
-float imageX = appWidth * 7.5/22.5;
-float imageY = appHeight * 0.7/12.5 ;
-float imageWidth = appWidth * 7.5/22.5 ;
-float imageHeight = appHeight * 5.8/12.5 ;
+float imageX = appWidth * 10.4/22.5;
+float imageY = appHeight * 9.4/12.5;
+float imageWidth = appWidth * 1.8/22.5;
+float imageHeight = appHeight * 1.9/12.5;
+float playX1 = imageX + imageWidth * 1/4;
+float playY1 = imageY + imageHeight * 1/4;
+float playX2 = imageX + imageWidth * 3/4;
+float playY2 = imageY + imageHeight * 1/2;
+float playX3 = imageX + imageWidth * 1/4;
+float playY3 = imageY + imageHeight * 3/4;
 //
 rect(imageX, imageY, imageWidth, imageHeight);
+//
+triangle(playX1, playY1, playX2, playY2, playX3, playY3);
