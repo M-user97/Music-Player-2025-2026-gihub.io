@@ -16,10 +16,10 @@ int appHeight = displayHeight;
 //rect(x, y, width, height);
 //Note: the debuggger expects rectangles to have float or double type variables
 //Using Ratios
-float imageX = appWidth * 1/4;
-float imageY = appHeight * 1/4;
-float imageWidth = appWidth * 1/2;
-float imageHeight = appHeight * 1/2;
+float imageX = appWidth * 10.4/22.5;
+float imageY = appHeight * 9.4/12.5;
+float imageWidth = appWidth * 1.8/22.5;
+float imageHeight = appHeight * 1.9/12.5;
 //
 rect(imageX, imageY, imageWidth, imageHeight);
 //
