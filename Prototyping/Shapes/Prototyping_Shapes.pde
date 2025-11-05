@@ -92,7 +92,7 @@ float volumeiconHeight = appHeight * 1.4/12.5;
 rect(volumeiconX, volumeiconY, volumeiconWidth, volumeiconHeight);
 //
 float moredot1X = appWidth * 21.7/22.5;
-float moredot1Y = appHeight * 9.1/12.5;
+float moredot1Y = appHeight * 9.17/12.5;
 float moredot1Width = appWidth * 0.5/22.5;
 float moredot1Height = appHeight * 0.5/12.5;
 //
@@ -106,25 +106,53 @@ float moredot2Height = appHeight * 0.5/12.5;
 rect(moredot2X, moredot2Y, moredot2Width, moredot2Height);
 //
 float moredot3X = appWidth * 21.7/22.5;
-float moredot3Y = appHeight * 10.5/12.5;
+float moredot3Y = appHeight * 10.43/12.5;
 float moredot3Width = appWidth * 0.5/22.5;
 float moredot3Height = appHeight * 0.5/12.5;
 //
 rect(moredot3X, moredot3Y, moredot3Width, moredot3Height);
 //
-float shareX = appWidth * 19.9/22.5;
+float shareX = appWidth * 20.1/22.5;
 float shareY = appHeight * 9.3/12.5;
-float shareWidth = appWidth * 1.6/22.5;
+float shareWidth = appWidth * 1.4/22.5;
 float shareHeight = appHeight * 1.5/12.5;
 //
 rect(shareX, shareY, shareWidth, shareHeight);
 //
-float playlistX = appWidth * 18.2/22.5;
+float playlistX = appWidth * 18.5/22.5;
 float playlistY = appHeight * 9.3/12.5;
-float playlistWidth = appWidth * 1.6/22.5;
+float playlistWidth = appWidth * 1.4/22.5;
 float playlistHeight = appHeight * 1.5/12.5;
 //
 rect(playlistX, playlistY, playlistWidth, playlistHeight);
+//
+float songtimeX = appWidth * 5.5/22.5;
+float songtimeY = appHeight * 8.25/12.5;
+float songtimeWidth = appWidth * 1.3/22.5;
+float songtimeHeight = appHeight * 0.6/12.5;
+//
+rect(songtimeX, songtimeY, songtimeWidth, songtimeHeight);
+//
+float songendX = appWidth * 15.9/22.5;
+float songendY = appHeight * 8.25/12.5;
+float songendWidth = appWidth * 1.3/22.5;
+float songendHeight = appHeight * 0.6/12.5;
+//
+rect(songendX, songendY, songendWidth, songendHeight);
+//
+float totaltimeX = appWidth * 6.8/22.5;
+float totaltimeY = appHeight * 6.9/12.5;
+float totaltimeWidth = appWidth * 4.5/22.5;
+float totaltimeHeight = appHeight * 1/12.5;
+//
+rect(totaltimeX, totaltimeY, totaltimeWidth, totaltimeHeight);
+//
+float timeellapseX = appWidth * 11.3/22.5;
+float timeellapseY = appHeight * 6.9/12.5;
+float timeellapseWidth = appWidth * 4.5/22.5;
+float timeellapseHeight = appHeight * 1/12.5;
+//
+rect(timeellapseX, timeellapseY, timeellapseWidth, timeellapseHeight);
 //square(nameX, nameY, nameDimension);
 //line(nameX1, nameY1, nameX2, nameY2);
 //triangle(nameX1, nameY1, nameX2, nameY2, nameX3, nameY3);
