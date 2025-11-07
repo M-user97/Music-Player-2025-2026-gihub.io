@@ -165,6 +165,182 @@ float triX3 = playX + playWidth - paddingX;
 float triY3 = playY + playHeight / 2;
 
 triangle(triX1, triY1, triX2, triY2, triX3, triY3);
+//
+// "Skip Next" symbol for skipright button
+float skipPaddingX = skiprightWidth * 0.2;
+float skipPaddingY = skiprightHeight * 0.2;
+
+// Triangle points for "next" (right arrow)
+float nextTriX1 = skiprightX + skipPaddingX;
+float nextTriY1 = skiprightY + skipPaddingY;
+float nextTriX2 = skiprightX + skipPaddingX;
+float nextTriY2 = skiprightY + skiprightHeight - skipPaddingY;
+float nextTriX3 = skiprightX + skiprightWidth - skipPaddingX;
+float nextTriY3 = skiprightY + skiprightHeight / 2;
+
+// Draw right-pointing triangle
+triangle(nextTriX1, nextTriY1, nextTriX2, nextTriY2, nextTriX3, nextTriY3);
+
+// Vertical bar for "next" look
+float barWidth = skiprightWidth * 0.12;
+float barX = skiprightX + skiprightWidth - skipPaddingX - barWidth;
+float barY = skiprightY + skipPaddingY;
+float barHeight = skiprightHeight - 2 * skipPaddingY;
+rect(barX, barY, barWidth, barHeight);
+//
+// "Skip Previous" symbol for skipleft button
+float skipLeftPaddingX = skipleftWidth * 0.2;
+float skipLeftPaddingY = skipleftHeight * 0.2;
+
+// Triangle points for "previous" (left arrow)
+float prevTriX1 = skipleftX + skipleftWidth - skipLeftPaddingX;
+float prevTriY1 = skipleftY + skipLeftPaddingY;
+float prevTriX2 = skipleftX + skipleftWidth - skipLeftPaddingX;
+float prevTriY2 = skipleftY + skipleftHeight - skipLeftPaddingY;
+float prevTriX3 = skipleftX + skipLeftPaddingX;
+float prevTriY3 = skipleftY + skipleftHeight / 2;
+
+// Draw left-pointing triangle
+triangle(prevTriX1, prevTriY1, prevTriX2, prevTriY2, prevTriX3, prevTriY3);
+
+// Vertical bar for "previous" look
+float prevBarWidth = skipleftWidth * 0.12;
+float prevBarX = skipleftX + skipLeftPaddingX;
+float prevBarY = skipleftY + skipLeftPaddingY;
+float prevBarHeight = skipleftHeight - 2 * skipLeftPaddingY;
+rect(prevBarX, prevBarY, prevBarWidth, prevBarHeight);
+//
+float plusCenterX = playlistX + playlistWidth / 2;
+float plusCenterY = playlistY + playlistHeight / 2;
+float plusHalfLength = min(playlistWidth, playlistHeight) * 0.27;
+//
+line(plusCenterX, plusCenterY - plusHalfLength, plusCenterX, plusCenterY + plusHalfLength);
+//
+line(plusCenterX - plusHalfLength, plusCenterY, plusCenterX + plusHalfLength, plusCenterY);
+//
+float houseCenterX = homeX + homeWidth / 2;
+float houseCenterY = homeY + homeHeight / 2;
+float houseWidth = homeWidth * 0.55;
+float houseHeight = homeHeight * 0.38;
+//
+float baseX = houseCenterX - houseWidth / 2;
+float baseY = houseCenterY;
+rect(baseX, baseY, houseWidth, houseHeight);
+
+//
+float roofCenterY = houseCenterY;
+triangle(
+  houseCenterX - houseWidth / 2, roofCenterY,        // left base
+  houseCenterX + houseWidth / 2, roofCenterY,        // right base
+  houseCenterX, roofCenterY - houseHeight * 0.8      // peak
+);
+
+// Optional: Draw door (rectangle)
+float doorWidth = houseWidth * 0.22;
+float doorHeight = houseHeight * 0.50;
+float doorX = houseCenterX - doorWidth / 2;
+float doorY = baseY + houseHeight - doorHeight;
+rect(doorX, doorY, doorWidth, doorHeight);
+//
+// X symbol for exit button
+float xCenterX = exitX + exitWidth / 2;
+float xCenterY = exitY + exitHeight / 2;
+float xHalfLength = min(exitWidth, exitHeight) * 0.34;
+
+// First line of X (top-left to bottom-right)
+line(xCenterX - xHalfLength, xCenterY - xHalfLength, xCenterX + xHalfLength, xCenterY + xHalfLength);
+// Second line of X (bottom-left to top-right)
+line(xCenterX - xHalfLength, xCenterY + xHalfLength, xCenterX + xHalfLength, xCenterY - xHalfLength);
+//
+// Apple-style Share icon in share rectangle
+
+// Box (open at top)
+float boxWidth = shareWidth * 0.60;
+float boxHeight = shareHeight * 0.31;
+float boxLeft = shareX + (shareWidth - boxWidth) / 2;
+float boxTop = shareY + shareHeight * 0.60;
+float boxRight = boxLeft + boxWidth;
+float boxBottom = boxTop + boxHeight;
+
+// Draw box (left, right, bottom sides)
+stroke(0);
+noFill();
+beginShape();
+vertex(boxLeft, boxTop);
+vertex(boxLeft, boxBottom);
+vertex(boxRight, boxBottom);
+vertex(boxRight, boxTop);
+endShape();
+
+// Arrow (vertical line up from center of box top)
+float arrowBaseX = shareX + shareWidth / 2;
+float arrowBaseY = boxTop;
+float arrowTipY = shareY + shareHeight * 0.32;
+float arrowHeadSize = shareWidth * 0.17;
+
+// Arrow shaft
+line(arrowBaseX, arrowBaseY, arrowBaseX, arrowTipY);
+
+// Arrowhead (triangle)
+triangle(
+  arrowBaseX, arrowTipY - arrowHeadSize * 0.5,
+  arrowBaseX - arrowHeadSize * 0.50, arrowTipY + arrowHeadSize * 0.35,
+  arrowBaseX + arrowHeadSize * 0.50, arrowTipY + arrowHeadSize * 0.35
+);
+
+// Optional: reset stroke and fill styles
+noFill();
+stroke(0);
+//
+// Square dot for moredot1 button
+float squareDotSize = min(moredot1Width, moredot1Height) * 0.7;
+float squareDotX = moredot1X + (moredot1Width - squareDotSize) / 2;
+float squareDotY = moredot1Y + (moredot1Height - squareDotSize) / 2;
+
+fill(40); // dark fill, change as needed
+noStroke();
+rect(squareDotX, squareDotY, squareDotSize, squareDotSize);
+
+// Reset fill/stroke if needed later
+noFill();
+stroke(0);
+//
+// Square dot for moredot2 button
+float squareDotSize2 = min(moredot2Width, moredot2Height) * 0.7;
+float squareDotX2 = moredot2X + (moredot2Width - squareDotSize2) / 2;
+float squareDotY2 = moredot2Y + (moredot2Height - squareDotSize2) / 2;
+
+fill(40); // dark fill, adjust color as needed
+noStroke();
+rect(squareDotX2, squareDotY2, squareDotSize2, squareDotSize2);
+
+// Reset fill/stroke if needed
+noFill();
+stroke(0);
+//
+// Square dot for moredot3 button
+float squareDotSize3 = min(moredot3Width, moredot3Height) * 0.7;
+float squareDotX3 = moredot3X + (moredot3Width - squareDotSize3) / 2;
+float squareDotY3 = moredot3Y + (moredot3Height - squareDotSize3) / 2;
+
+fill(40); // dark fill, change as needed
+noStroke();
+rect(squareDotX3, squareDotY3, squareDotSize3, squareDotSize3);
+
+// Reset fill/stroke if needed for later shapes
+noFill();
+stroke(0);
+//
+// Stop symbol for stop button
+float stopCenterX = stopX + stopWidth / 2;
+float stopCenterY = stopY + stopHeight / 2;
+float stopSquareSize = min(stopWidth, stopHeight) * 0.56;
+
+// Draw centered stop square
+float stopSquareX = stopCenterX - stopSquareSize / 2;
+float stopSquareY = stopCenterY - stopSquareSize / 2;
+rect(stopSquareX, stopSquareY, stopSquareSize, stopSquareSize);
+//
 // already in your code
 //square(nameX, nameY, nameDimension);
 //line(nameX1, nameY1, nameX2, nameY2);
