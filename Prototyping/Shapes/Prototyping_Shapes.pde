@@ -1,5 +1,3 @@
-//
-//Display CANVAS
 //size(); //width //height
 fullScreen(); //displayWidth //displayHeight
 int appWidth = displayWidth;
@@ -140,19 +138,19 @@ float songendHeight = appHeight * 0.6/12.5;
 
 rect(songendX, songendY, songendWidth, songendHeight);
 //
-float totaltimeX = appWidth * 6.8/22.5;
-float totaltimeY = appHeight * 6.9/12.5;
-float totaltimeWidth = appWidth * 4.5/22.5;
-float totaltimeHeight = appHeight * 1/12.5;
+float titleX = appWidth * 6.8/22.5;
+float titleY = appHeight * 6.9/12.5;
+float titleWidth = appWidth * 4.5/22.5;
+float titleHeight = appHeight * 1/12.5;
 
-rect(totaltimeX, totaltimeY, totaltimeWidth, totaltimeHeight);
+rect(titleX, titleY, titleWidth, titleHeight);
 //
-float timeellapseX = appWidth * 11.3/22.5;
-float timeellapseY = appHeight * 6.9/12.5;
-float timeellapseWidth = appWidth * 4.5/22.5;
-float timeellapseHeight = appHeight * 1/12.5;
+float albumartistX = appWidth * 11.3/22.5;
+float albumartistY = appHeight * 6.9/12.5;
+float albumartistWidth = appWidth * 4.5/22.5;
+float albumartistHeight = appHeight * 1/12.5;
 
-rect(timeellapseX, timeellapseY, timeellapseWidth, timeellapseHeight);
+rect(albumartistX, albumartistY, albumartistWidth, albumartistHeight);
 //
 float paddingX = playWidth * 0.2;
 float paddingY = playHeight * 0.2;
@@ -341,6 +339,39 @@ float stopSquareX = stopCenterX - stopSquareSize / 2;
 float stopSquareY = stopCenterY - stopSquareSize / 2;
 rect(stopSquareX, stopSquareY, stopSquareSize, stopSquareSize);
 //
+// Album title for music player in title rect
+
+String albumTitle = "Blue Moon"; // Example: album title
+textAlign(CENTER, CENTER);
+textSize(min(titleX, titleWidth, titleHeight) * 0.5); // Responsive to rectangle
+fill(0); // Black text, change as needed
+float titleCenterX = titleX + titleWidth / 2;
+float titleCenterY = titleY + titleHeight / 2;
+
+// Draw album title centered in rectangle
+text(albumTitle, titleCenterX, titleCenterY);
+
+// Reset text settings if needed for later UI
+textAlign(LEFT, BASELINE);
+textSize(12);
+noFill();
+//
+// Album artist name in albumartist rect
+
+String albumArtist = "JVNA"; // Example: artist name
+textAlign(CENTER, CENTER);
+textSize(min(albumartistWidth, albumartistHeight) * 0.5); // Sizing responsive to rectangle
+fill(0); // Black text, adjust as needed
+float artistCenterX = albumartistX + albumartistWidth / 2;
+float artistCenterY = albumartistY + albumartistHeight / 2;
+
+// Draw artist name centered in rectangle
+text(albumArtist, artistCenterX, artistCenterY);
+
+// Reset text settings if needed for later elements
+textAlign(LEFT, BASELINE);
+textSize(12);
+noFill();
 // already in your code
 //square(nameX, nameY, nameDimension);
 //line(nameX1, nameY1, nameX2, nameY2);
