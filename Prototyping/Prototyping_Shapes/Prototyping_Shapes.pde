@@ -152,18 +152,6 @@ float albumartistHeight = appHeight * 1/12.5;
 
 rect(albumartistX, albumartistY, albumartistWidth, albumartistHeight);
 //
-float paddingX = playWidth * 0.2;
-float paddingY = playHeight * 0.2;
-
-float triX1 = playX + paddingX;
-float triY1 = playY + paddingY;
-float triX2 = playX + paddingX;
-float triY2 = playY + playHeight - paddingY;
-float triX3 = playX + playWidth - paddingX;
-float triY3 = playY + playHeight / 2;
-
-triangle(triX1, triY1, triX2, triY2, triX3, triY3);
-//
 float skipPaddingX = skiprightWidth * 0.2;
 float skipPaddingY = skiprightHeight * 0.2;
 
@@ -316,7 +304,7 @@ rect(stopSquareX, stopSquareY, stopSquareSize, stopSquareSize);
 String albumTitle = "Blue Moon";
 textAlign(CENTER, CENTER);
 textSize(min(titleX, titleWidth, titleHeight) * 0.5);
-fill(0); // Black text, change as needed
+fill(0);
 float titleCenterX = titleX + titleWidth / 2;
 float titleCenterY = titleY + titleHeight / 2;
 
@@ -338,6 +326,42 @@ text(albumArtist, artistCenterX, artistCenterY);
 textAlign(LEFT, BASELINE);
 textSize(12);
 noFill();
+//
+//
+float boxPadding = min(muteWidth, muteHeight) * 0.18;
+float boxSize = min(muteWidth, muteHeight) - 2 * boxPadding;
+float boxX = muteX + (muteWidth - boxSize) / 2;
+float boxY = muteY + (muteHeight - boxSize) / 2;
+
+//
+noFill();
+stroke(0);
+strokeWeight(1);
+rect(boxX, boxY, boxSize, boxSize);
+
+//
+float crossPadding = boxSize * 0.23;
+float x1 = boxX + crossPadding;
+float y1 = boxY + crossPadding;
+float x2 = boxX + boxSize - crossPadding;
+float y2 = boxY + boxSize - crossPadding;
+line(x1, y1, x2, y2);
+line(x1, y2, x2, y1);
+strokeWeight(0);
+//
+//
+float paddingX = playWidth * 0.2;
+float paddingY = playHeight * 0.2;
+
+float triX1 = playX + paddingX;
+float triY1 = playY + paddingY;
+float triX2 = playX + paddingX;
+float triY2 = playY + playHeight - paddingY;
+float triX3 = playX + playWidth - paddingX;
+float triY3 = playY + playHeight / 2;
+
+triangle(triX1, triY1, triX2, triY2, triX3, triY3);
+
 // already in your code
 //square(nameX, nameY, nameDimension);
 //line(nameX1, nameY1, nameX2, nameY2);
