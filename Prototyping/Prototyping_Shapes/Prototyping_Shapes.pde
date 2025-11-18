@@ -347,7 +347,7 @@ float x2 = boxX + boxSize - crossPadding;
 float y2 = boxY + boxSize - crossPadding;
 line(x1, y1, x2, y2);
 line(x1, y2, x2, y1);
-strokeWeight(0);
+strokeWeight(1);
 //
 //
 float paddingX = playWidth * 0.2;
