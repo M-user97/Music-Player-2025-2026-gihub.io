@@ -154,8 +154,26 @@ float skiprightY2 = imageHeight * 1/2;
 float skiprightX3 = imageWidth * 1/4;
 float skiprightY3 = imageHeight * 3/4;
 triangle(skiprightX1, skiprightY1, skiprightX2, skiprightY2, skiprightX3, skiprightY3);
+//
+float skipleftX1 = imageWidth * 3/4;
+float skipleftY1 = imageHeight * 1/4;
+float skipleftX2 = imageWidth * 1/2;
+float skipleftY2 = imageHeight * 1/2;
+float skipleftX3 = imageWidth * 3/4;
+float skipleftY3 = imageHeight * 3/4;
+triangle(skipleftX1, skipleftY1, skipleftX2, skipleftY2, skipleftX3, skipleftY3);
+//
+float stopX1 = imageWidth * 1/4;
+float stopY1 = imageHeight * 1/4;
+float stopX2 = imageWidth * 3/4;
+float stopY2 = imageHeight * 1/4;
+float stopX3 = imageWidth * 3/4;
+float stopY3 = imageHeight * 3/4;
+
+line(stopX1, stopY1, stopX2, stopY2, stopX3, stopY3);
+//
 // already in your code
-//rect(nameX, nameY, nameWidth, nameHeight)
+//rect(nameX, nameY, nameWidth, nameHeight);
 //square(nameX, nameY, nameDimension);
 //line(nameX1, nameY1, nameX2, nameY2);
 //triangle(nameX1, nameY1, nameX2, nameY2, nameX3, nameY3);
