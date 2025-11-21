@@ -163,14 +163,10 @@ float skipleftX3 = imageWidth * 3/4;
 float skipleftY3 = imageHeight * 3/4;
 triangle(skipleftX1, skipleftY1, skipleftX2, skipleftY2, skipleftX3, skipleftY3);
 //
-float stopX1 = imageWidth * 1/4;
-float stopY1 = imageHeight * 1/4;
-float stopX2 = imageWidth * 3/4;
-float stopY2 = imageHeight * 1/4;
-float stopX3 = imageWidth * 3/4;
-float stopY3 = imageHeight * 3/4;
-
-line(stopX1, stopY1, stopX2, stopY2, stopX3, stopY3);
+float stopbuttonX = imageWidth * 1/4;
+float stopbuttonY = imageHeight * 2/4;
+float stopbuttonDimension = imageWidth * 1/2;
+square(stopbuttonX, stopbuttonY, stopbuttonDimension);
 //
 // already in your code
 //rect(nameX, nameY, nameWidth, nameHeight);
