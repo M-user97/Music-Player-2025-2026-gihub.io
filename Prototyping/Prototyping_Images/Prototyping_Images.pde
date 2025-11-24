@@ -25,12 +25,14 @@ String imagePathway1 = upArrow + folder + Sunset + fileExtensionJPG;
 //println("Sunset Pathway:", imagePathway1);
 //Image Loading & Aspect Ratio
 PImage image1 = loadImage( imagePathway1 );
-int imageWidth1 = 500; //Hardcoded
-int imageHeight1 = 331; //Hardcoded
+int imageWidth1 = 500;
+int imageHeight1 = 331;
 //Aspect Ratio
-//float image1AspectRatio_GreaterOne = () ? : ;
+float image1AspectRatio_GreaterOne = (imageWidth1 = imageHeight1) ? imageWidth1/imageHeight1 : imageHeight1/imageWidth1 ;
 //
+println(image1AspectRatio_GreaterOne);
 //DIV
 rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
 //
 image(image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight);
+//
