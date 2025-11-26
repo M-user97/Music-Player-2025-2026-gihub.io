@@ -3,10 +3,10 @@
 */
 //
 //Display
-fullScreen(); //Landscape
-//size(500, 700); //Portrait
-int appWidth = displayWidth; //width
-int appHeight = displayHeight; //height
+//fullScreen(); //Landscape
+size(500, 250); //Portrait
+int appWidth = width; //displayWidth
+int appHeight = height; //displayHeight
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\t\t\t\t\tFullScreen, displayWidth:"+displayWidth, "displayHeight:"+displayHeight, "\n\t\t\t\t\t\t\t\t\tSize\t\t, width:"+width, "height:"+height);
 //
 //Population
@@ -31,6 +31,7 @@ int imageHeight1 = 630;
 float image1AspectRatio_GreaterOne = (imageWidth1 >= imageHeight1) ? float(imageWidth1)/float(imageHeight1) : float(imageHeight1)/float(imageWidth1) ;
 //
 println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for Decimals, formuale", imageWidth1/imageHeight1);
+//
 //DIV
 //
 /*
