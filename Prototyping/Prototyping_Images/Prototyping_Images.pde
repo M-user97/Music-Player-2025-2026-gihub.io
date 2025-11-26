@@ -1,5 +1,5 @@
-/* Aspect Ratio: Sunset Only Demonstration
-- Sunset
+/* Aspect Ratio: FullMoon Only Demonstration
+- FullMoon
 */
 //
 //Display
@@ -19,14 +19,14 @@ float imageDivHeight = appHeight*4/5;
 //Directory or Pathway, Concatenation
 String upArrow = "../../";
 String folder = "Images/";
-String Sunset = "Sunset";
+String FullMoon = "FullMoon";
 String fileExtensionJPG = ".jpg";
-String imagePathway1 = upArrow + folder + Sunset + fileExtensionJPG;
-//println("Sunset Pathway:", imagePathway1);
+String imagePathway1 = upArrow + folder + FullMoon + fileExtensionJPG;
+//println("FullMoon Pathway:", imagePathway1);
 //Image Loading & Aspect Ratio
 PImage image1 = loadImage( imagePathway1 );
-int imageWidth1 = 500;
-int imageHeight1 = 331;
+int imageWidth1 = 1200;
+int imageHeight1 = 630;
 //Aspect Ratio
 float image1AspectRatio_GreaterOne = (imageWidth1 >= imageHeight1) ? float(imageWidth1)/float(imageHeight1) : float(imageHeight1)/float(imageWidth1) ;
 //
