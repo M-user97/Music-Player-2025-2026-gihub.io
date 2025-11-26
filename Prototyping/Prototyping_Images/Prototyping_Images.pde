@@ -1,5 +1,5 @@
 /* Aspect Ratio: Sunset Only Demonstration
--
+- Sunset
 */
 //
 //Display
@@ -33,14 +33,14 @@ float image1AspectRatio_GreaterOne = (imageWidth1 >= imageHeight1) ? float(image
 println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for Decimals, formuale", imageWidth1/imageHeight1);
 //DIV
 //
-\*
+/*
 imageWidth1
 imageDivWidth
 imageHeight1
 imageDivHeight
-imageDivHeight, imageDivHeight
+imageDivWidth, imageDivHeight
 */
-//if () {} else {} //End If Aspect Ratio
+//if () {} else {} //End IF Aspect Ratio
 //
 rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
 //
