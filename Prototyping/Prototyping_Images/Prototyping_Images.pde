@@ -25,6 +25,10 @@ String imagePathway1 = upArrow + folder + FullMoon + fileExtensionJPG;
 //println("FullMoon Pathway:", imagePathway1);
 //Image Loading & Aspect Ratio
 PImage image1 = loadImage( imagePathway1 );
+if ( image1 == null ) {
+  println("NullPointerExeption on Image .. Spelling
+}
+//
 int imageWidth1 = 1200;
 int imageHeight1 = 630;
 //Aspect Ratio
@@ -32,18 +36,9 @@ float image1AspectRatio_GreaterOne = (imageWidth1 >= imageHeight1) ? float(image
 //
 println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for Decimals, formuale", imageWidth1/imageHeight1);
 //
+//
 //DIV
-//
-/*
-imageWidth1
-imageDivWidth
-imageHeight1
-imageDivHeight
-imageDivWidth, imageDivHeight
-*/
-//if () {} else {} //End IF Aspect Ratio
-//
 rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
 //
 image(image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight);
-//
+//image(image1, imageDivX, imageDivY,
