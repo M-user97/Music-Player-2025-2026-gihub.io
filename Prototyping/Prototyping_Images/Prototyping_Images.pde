@@ -24,9 +24,13 @@ String fileExtensionJPG = ".jpg";
 String imagePathway1 = upArrow + folder + FullMoon + fileExtensionJPG;
 //println("FullMoon Pathway:", imagePathway1);
 //Image Loading & Aspect Ratio
+//
+PImage errorimage = loadImage( "errorimage.png");
 PImage image1 = loadImage( imagePathway1 );
 if ( image1 == null ) {
-  println("NullPointerExeption on Image .. Spelling
+  println("NullPointerException on Image ... Spelling Mistake with Pathway Concatenation");
+  image1 = errorimage;
+  exit();
 }
 //
 int imageWidth1 = 1200;
@@ -36,9 +40,17 @@ float image1AspectRatio_GreaterOne = (imageWidth1 >= imageHeight1) ? float(image
 //
 println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for Decimals, formuale", imageWidth1/imageHeight1);
 //
+float imageWidthAdjusted1 = imageDivWidth;
+float imageHeightAdjusted1 = ( imageWidth1 >= imageDivWidth ) ? imageWidthAdjusted1 * image1AspectRatio_GreaterOne : imageWidthAdjusted1 / image1AspectRatio_GreaterOne ; //Ternary Operator
+//Verification: looks good
+if ( imageHeightAdjusted1 > imageDivHeight ) {
+  println("Image doesn't fit, program ended ... Fatal Flaw, must be solved ... Image doesn't show.");
+  //exit();
+}
 //
 //DIV
 rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
 //
 image(image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight);
-//image(image1, imageDivX, imageDivY,
+//image(image1, imageDivX, imageDivY, imageWidthAdjusted1, imageHeightAdjusted1);
+//
