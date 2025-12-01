@@ -26,14 +26,13 @@ String imagePathway1 = upArrow + folder + FullMoon + fileExtensionJPG;
 //println("FullMoon Pathway:", imagePathway1);
 //Image Loading & Aspect Ratio
 //
-PImage errorImage = loadImage( "Old man portrait.png" );
+PImage errorImage = loadImage( "errorimage.png" );
 PImage image1 = loadImage( imagePathway1 );
 if ( image1 == null ) {
   println("NullPointerException on Image ... Spelling Mistake with Pathway Concatenation");
   image1 = errorImage;
   exit();
 }
-//Demonstrates alternate way to load an image without a pathway
 //
 int imageWidth1 = 1200; 
 int imageHeight1 = 630; 
@@ -48,7 +47,6 @@ if ( imageHeightAdjusted1 > imageDivHeight ) {
   println("Image doesn't fit, program ended ... Fatal Flaw, must be solved ... Image doesn't show.");
   //exit();
   int indexWhile = 0; //Local Variable to IF-Statement
-  //** WHILE Loops can run infinitely with an error if not controlled
   while ( imageHeightAdjusted1>imageDivHeight ) {
     println("Iteration of Percent WHILE Loop", indexWhile++);
     if ( indexWhile < 10000 ) {
@@ -63,10 +61,9 @@ if ( imageHeightAdjusted1 > imageDivHeight ) {
     imageWidthAdjusted1 *= 0.70; // -= 1
     imageHeightAdjusted1 = imageWidthAdjusted1/image1AspectRatio_GreaterOne;
     println("Inspection of percent decrase:", imageWidthAdjusted1, imageHeightAdjusted1, imageDivHeight);
-  } //End WHILE
-  //Percent will be too small, must count back up but be smaller than total iterations
+  } //End While
   while ( imageHeightAdjusted1<imageDivHeight ) {
-    println("Iteration of Pixel WHILE Loop", indexWhile++); //prints value, then adds one, order is important in AP
+    println("Iteration of Pixel WHILE Loop", indexWhile++);
     if ( indexWhile < 10000 ) {
       //Checking Image Size
     } else {
