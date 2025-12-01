@@ -46,7 +46,7 @@ float imageHeightAdjusted1 = ( imageWidth1 >= imageDivWidth ) ? imageWidthAdjust
 if ( imageHeightAdjusted1 > imageDivHeight ) {
   println("Image doesn't fit, program ended ... Fatal Flaw, must be solved ... Image doesn't show.");
   //exit();
-  int indexWhile = 0; //Local Variable to IF-Statement
+  int indexWhile = 0;
   while ( imageHeightAdjusted1>imageDivHeight ) {
     println("Iteration of Percent WHILE Loop", indexWhile++);
     if ( indexWhile < 10000 ) {
