@@ -3,18 +3,18 @@
  */
 //
 //Display
-//fullScreen(); //Landscape
-size(500, 250); //Portrait, testing smaller DIVs ONLY
+fullScreen(); //Landscape
+//size(500, 250); //Portrait, testing smaller DIVs ONLY
 int appWidth = width; //displayWidth
 int appHeight = height; //displayHeight
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight);
 //println("\t\t\t\tFullScreen, displayWidth:\t"+displayWidth, "\tdisplayHeight:\t"+displayHeight, "\n\t\t\t\tSize\t, width:\t\t"+width, "\theight:\t\t"+height);
 //
 //Population
-float imageDivX = appWidth*1/4;
-float imageDivY = appHeight*1/10;
-float imageDivWidth = appWidth*1/2;
-float imageDivHeight = appHeight*1/5; //4/5  
+float imageDivX = appWidth*1/8;
+float imageDivY = appHeight*1/8;
+float imageDivWidth = appWidth*3/4;
+float imageDivHeight = appHeight*4/5; //4/5  
 //
 //Image Aspect Ratio Vars & Algorithm
 //Directory or Pathway, Concatenation
@@ -35,7 +35,7 @@ if ( image1 == null ) {
 }
 //
 int imageWidth1 = 1200; 
-int imageHeight1 = 630; 
+int imageHeight1 = 625; 
 //Aspect Ratio
 float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageHeight1)/float(imageWidth1) ; 
 //println("Testing for Decimals, formula unsing ints:", imageWidth1/imageHeight1);
@@ -81,6 +81,6 @@ if ( imageHeightAdjusted1 > imageDivHeight ) {
 //DIV
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //
-//image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
-image( image1, imageDivX, imageDivY, imageWidthAdjusted1, imageHeightAdjusted1 );
+image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
+//image( image1, imageDivX, imageDivY, imageWidthAdjusted1, imageHeightAdjusted1 );
 //
