@@ -3,8 +3,8 @@
  */
 //
 //Display
-fullScreen(); //Landscape
-//size(500, 250); //Portrait, testing smaller DIVs ONLY
+//fullScreen(); //Landscape
+size(500, 250); //Portrait
 int appWidth = width; //displayWidth
 int appHeight = height; //displayHeight
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight);
