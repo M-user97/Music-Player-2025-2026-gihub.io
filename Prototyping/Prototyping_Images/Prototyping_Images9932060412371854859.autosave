@@ -3,8 +3,8 @@
  */
 //
 //Display
-fullScreen(); //Landscape
-//size(500, 250); //Portrait, testing smaller DIVs ONLY
+//fullScreen(); //Landscape
+size(500, 250); //Portrait, testing smaller DIVs ONLY
 int appWidth = width; //displayWidth
 int appHeight = height; //displayHeight
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight);
@@ -12,7 +12,7 @@ int appHeight = height; //displayHeight
 //
 //Population
 float imageDivX = appWidth*1/8;
-float imageDivY = appHeight*1/8;
+float imageDivY = appHeight*1/9;
 float imageDivWidth = appWidth*3/4;
 float imageDivHeight = appHeight*4/5; //4/5  
 //
