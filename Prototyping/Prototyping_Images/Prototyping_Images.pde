@@ -3,8 +3,8 @@
  */
 //
 //Display
-fullScreen(); //Landscape
-//size(500, 250); //Portrait
+//fullScreen(); //Landscape
+size(500, 250); //Portrait
 int appWidth = width; //displayWidth
 int appHeight = height; //displayHeight
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight);
@@ -12,7 +12,7 @@ int appHeight = height; //displayHeight
 //
 //Population
 float imageDivX = appWidth*1/8;
-float imageDivY = appHeight*1/8;
+float imageDivY = appHeight*1/10;
 float imageDivWidth = appWidth*3/4;
 float imageDivHeight = appHeight*4/5; //4/5  
 //
@@ -79,6 +79,6 @@ if ( imageHeightAdjusted1 > imageDivHeight ) {
 //DIV
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //
-image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
-//image( image1, imageDivX, imageDivY, imageWidthAdjusted1, imageHeightAdjusted1 );
+//image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
+image( image1, imageDivX, imageDivY, imageWidthAdjusted1, imageHeightAdjusted1 );
 //
