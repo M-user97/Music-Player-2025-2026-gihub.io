@@ -1,13 +1,8 @@
-# Music Player
-Lesson
+# My Music Player
+- Lessons
 
-# | A To Do list |
-
-[X] Create To Do List in Markdown
-
-[X] Thematic Music Player
-
-[x] 3 Songs & 1 Sound Effects
-
-[x] 3 Images
-
+# | A To Do List |
+- [x] Create To Do List in Markdown
+- [x] Thematic Music Player 
+- [x] 3 Songs & 1 sound effect
+- [x] 3 Images
