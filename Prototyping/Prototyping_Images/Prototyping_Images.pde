@@ -4,7 +4,7 @@
 //
 //Display
 //fullScreen(); //Landscape
-size(500, 250); //Portrait
+size(500, 100); //Portrait
 int appWidth = width; //displayWidth
 int appHeight = height; //displayHeight
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight);
@@ -32,7 +32,7 @@ if ( image1 == null ) {
 }
 //
 int imageWidth1 = 1200; 
-int imageHeight1 = 625; 
+int imageHeight1 = 630; 
 //
 float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageHeight1)/float(imageWidth1) ; 
 //println("Testing for Decimals, formula unsing ints:", imageWidth1/imageHeight1);
